@@ -1,0 +1,87 @@
+html{
+    background-color: aqua;
+}
+
+/*
+@media screen and (min-width: 600px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+    body {
+      background-color: lightyellow;
+    }
+  }
+*/
+
+#Título{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#video video{
+    width: 100%;
+    height: auto;
+}
+#Izq{
+    flex: 30%;
+    float: left;
+    width: 33%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #d82020;
+}
+.bloque{
+    background-color: #20d867;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+#Dcha{
+    flex: 60%;
+    float: right;
+    width: 66%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #c9da12;
+}
+
+.Redes{
+    list-style-position: inside;
+    float: left;
+    text-align: center;
+    width: 33%;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-top: 10px;
+} 
+.Políticas{
+    float: right;
+    text-align: center;
+    width: 33%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+footer {
+    font-size: 12px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #020202;
+    opacity: 0.9;
+    color: white;
+    text-align: left;
+}
+footer p{
+    margin: 3px;
+}
