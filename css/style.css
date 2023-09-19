@@ -27,8 +27,12 @@ html{
     width: 100%;
     height: auto;
 }
+#p1{
+    display: flex;
+    margin: 30px;
+}
 #Izq{
-    flex: 30%;
+    flex: 1;
     float: left;
     width: 33%;
     height: 100%;
@@ -36,22 +40,24 @@ html{
     box-sizing: border-box;
     background-color: #d82020;
 }
+#Dcha{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #c9da12;
+}
 .bloque{
-    background-color: #20d867;
+    float: left;
+    background-color: #8b20d8;
     color: #ffffff;
     text-align: center;
-    width: 100%;
+    width: 30%;
+    margin: 10px;
     padding: 5px;
     box-sizing: border-box;
 }
-#Dcha{
-    flex: 60%;
-    float: right;
-    width: 66%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #c9da12;
-}
+
 
 .Redes{
     list-style-position: inside;
