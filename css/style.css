@@ -1,5 +1,6 @@
 html{
-    background-color: aqua;
+    background-color: #efefef;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*
@@ -15,7 +16,11 @@ html{
     }
   }
 */
-
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 #Título{
     font-size: 50px;
     font-weight: bold;
@@ -57,7 +62,9 @@ html{
     padding: 5px;
     box-sizing: border-box;
 }
-
+#Dcha:nth-child(1){
+    background-image: url("/media/images/h1.jpg");
+}
 
 .Redes{
     list-style-position: inside;
