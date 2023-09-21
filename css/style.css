@@ -38,12 +38,13 @@ body{
 }
 #Izq{
     flex: 1;
-    float: left;
-    width: 33%;
-    height: 100%;
+    /* width: 33.3%;
+    height: 100%; */
     padding: 10px;
     box-sizing: border-box;
     background-color: #d82020;
+    border: 7px solid #1e49d5;
+    border-radius: 20px;
 }
 #Dcha{
     flex: 3;
@@ -54,7 +55,7 @@ body{
 }
 .bloque{
     float: left;
-    background-color: #8b20d8;
+    /* background-color: #8b20d8; */
     color: #ffffff;
     text-align: center;
     width: 30%;
@@ -62,8 +63,11 @@ body{
     padding: 5px;
     box-sizing: border-box;
 }
-#Dcha:nth-child(1){
-    background-image: url("/media/images/h1.jpg");
+.bloque:nth-child(1){
+    background-image: url("https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Redes{
