@@ -3,7 +3,16 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* rojo: #E13726
+    azul claro: #404395
+    gris: #aba5d0
+    azul marino: 
+    amarillo:
 
+    Letra normal: Rubik
+    Letra titulos:
+
+*/
 /* @media screen and (max-width: 600px) {
     html {
       background-color: lightgreen;
@@ -30,13 +39,19 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+#logo{
+    position: absolute;
+    width:23%;
+}
 #video video{
     width: 100%;
     height: auto;
 }
+
 #p1{
     display: flex;
     margin: 0px;
+    height: 100dvh;
 }
 #Izq{
     flex: 1;
@@ -44,7 +59,7 @@ body{
     height: 100%; */
     padding: 10px;
     box-sizing: border-box;
-    background-color: #d82020;
+    background-color: white;
     border: 7px solid #1e49d5;
     border-radius: 20px;
 }
@@ -60,8 +75,9 @@ body{
     /* background-color: #8b20d8; */
     color: #ffffff;
     text-align: center;
-    width: 49%;
-    margin: 0.25%;
+    width: 33%;
+    height: 49.5%;
+    margin: 0;
     padding: 5px;
     box-sizing: border-box;
     background-size: cover;
