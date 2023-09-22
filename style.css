@@ -116,16 +116,20 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px;
     grid-gap: 20px;
-    padding: 100px 0;
+    padding: 0 0;
 }
 #p2{
     display: flex;
+    /* height: 100vh; */
 }
-.izq{
+.Izq{
+    flex: 35%;
+    margin-top: 100px;
+    font-size: 2vw;
 
 }
-.dcha{
-
+.Dcha{
+    flex: 65%;
 }
 .box img{
     width: 100%;
