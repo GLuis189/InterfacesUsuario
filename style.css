@@ -109,6 +109,15 @@ body{
     background-color: #1e49d5;
     height: 10px;
 }
+.T1{
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #d82020;
+    text-shadow: 3px 5px 5px#1e49d5;
+}
 #galeria{
     max-width: 1200px;
     margin: 0 auto;
@@ -118,18 +127,18 @@ body{
     grid-gap: 20px;
     padding: 0 0;
 }
-#p2{
+#p3{
     display: flex;
     /* height: 100vh; */
 }
-.Izq{
+.Dcha{
     flex: 35%;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 2vw;
 
 }
-.Dcha{
-    flex: 65%;
+.Izq{
+    flex: 60%;
 }
 .box img{
     width: 100%;
