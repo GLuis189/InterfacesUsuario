@@ -113,7 +113,7 @@ body{
 .link{
     text-decoration: none;
     color: #ffffff;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: bold;
     text-shadow: 2px 2px 2px #000000;
     text-align: center;
@@ -126,7 +126,7 @@ body{
     height: 10px;
 }
 .T{
-    font-size: 100px;
+    font-size: 10dvw;
     font-weight: bold;
     text-align: center;
     margin: 0;
