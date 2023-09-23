@@ -189,6 +189,7 @@ body{
 }
 .img_historia{
     display: grid;
+    margin: 2%;
 }
 
 .img_historia img{
