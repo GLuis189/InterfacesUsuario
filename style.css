@@ -123,14 +123,14 @@ body{
     margin: 0px;
 }
 .Izq1{
-    flex: 35%;
+    flex-grow: 3;
     display: flex;
     font-size: 2vw;
     text-align: center;
     align-items: center;
 }
 .Dcha1{
-    flex: 60%;
+    flex-grow: 1.5;
 }
 .slider{
     width:95%;
@@ -199,12 +199,12 @@ body{
     display: flex;
 }
 .Izq3{
-    flex: 60%;
+    flex-grow: 1.5;
     margin-top: 50px;
     font-size: 2vw;
 }
 .Dcha3{
-    flex: 35%;
+    flex-grow: 1;
 }
 .historia{
     margin-top: 0;
@@ -288,10 +288,30 @@ footer p{
     #p1{
         flex-wrap: wrap;
     }
+    #p2{
+        flex-wrap: wrap;
+    }
+    .Izq1{
+        font-size: 4vw;
+        order: 2;
+    }
+    
     .bloque a{
         font-size: 3vw;
     }
     #p3{
         flex-wrap: wrap;
     }
+    #p4{
+        flex-wrap: wrap;
+    }
+    .Izq3{
+        order: 2;
+    }
+    .Dcha3{
+        order: 1;
+    }
+    .historia{
+        font-size: 4vw;
+    }	
 }
