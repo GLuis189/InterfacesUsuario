@@ -265,7 +265,7 @@ footer p{
 @media screen and (max-width:600px){
     
     .galeria{
-        padding: 20px;
+        padding: 15px;
         grid-template-columns: repeat(2, 1fr);
     }
     .box:nth-child(1)
@@ -276,6 +276,53 @@ footer p{
     {
         grid-column-start: span 1;
     } 
+    .box:nth-child(7)
+    {
+        grid-column-start: span 2;
+    }
+    .Dcha2{
+        font-size: 3vw;
+    }
+    .T{
+        font-size: 10vw;
+    }
+    #p1{
+        flex-wrap: wrap;
+    }
+    #p2{
+        flex-wrap: wrap;
+    }
+    .Izq1{
+        font-size: 3vw;
+        order: 2;
+    }
+    
+    .bloque a{
+        font-size: 3vw;
+    }
+    #p3{
+        flex-wrap: wrap;
+    }
+    #p4{
+        flex-wrap: wrap;
+    }
+    .Izq3{
+        order: 2;
+    }
+    .Dcha3{
+        order: 1;
+    }
+    .historia{
+        font-size: 3vw;
+    }	
+}
+
+@media screen and (max-width:768px){
+    
+    .galeria{
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .box:nth-child(7)
     {
         grid-column-start: span 2;
