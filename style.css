@@ -58,7 +58,7 @@ body{
     height: 100dvh;
 }
 #P_Izq{
-    flex: 1;
+    display: flex;
     /* width: 33.3%;
     height: 100%; */
     padding: 10px;
