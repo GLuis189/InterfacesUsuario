@@ -34,14 +34,15 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: #efefef;
+    font-family: 'Nunito Sans';
 }
-#Título{
+/* #Título{
     font-size: 50px;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-}
+} */
 #logo{
     position: absolute;
     width:23%;
@@ -73,7 +74,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #c9da12;
+    background-color: red;
 }
 .bloque{
     float: left;
@@ -120,6 +121,7 @@ body{
     border: solid #1e49d5 5px;
     background-color: #efefef;
     border-radius: 10px;
+    font-family: 'Jockey One'
 }
 .divisor{
     background-color: #1e49d5;
@@ -133,6 +135,7 @@ body{
     padding: 0;
     color: #d82020;
     text-shadow: 3px 5px 5px#1e49d5;
+    font-family: 'Jockey One'
 }
 #p2{
     display: flex;
