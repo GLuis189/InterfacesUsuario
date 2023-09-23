@@ -181,6 +181,7 @@ body{
 }
 .Izq2{
     flex-grow: 3;
+    min-width: 40vw;
 }
 .box img{
     width: 100%;
