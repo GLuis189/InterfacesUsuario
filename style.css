@@ -25,6 +25,9 @@ body{
     background-color: #efefef;
     font-family: 'Nunito Sans';
 }
+.pagina{
+    display: flex;
+}
 #logo{
     position: absolute;
 }
@@ -48,9 +51,8 @@ body{
 
 #p1{
     background-color: #1e49d5;
-    display: flex;
-    margin: 0px;
 }
+
 #P_Izq{
     display: flex;
     flex-grow: 1;
@@ -70,7 +72,6 @@ body{
 }
 .bloque{
     float: left;
-    /* background-color: #8b20d8; */
     color: #ffffff;
     text-align: center;
     width: 33%;
@@ -108,7 +109,7 @@ body{
     background-color: #1e49d5;
     height: 10px;
 }
-.T{
+.titulo{
     font-size: 10dvw;
     font-weight: bold;
     text-align: center;
@@ -118,20 +119,34 @@ body{
     text-shadow: 3px 5px 5px#1e49d5;
     font-family: 'Jockey One'
 }
-#p2{
-    display: flex;
-    margin: 0px;
+.grande{
+    flex-grow: 3;
 }
-.Izq1{
+.fotos{
+    min-width: 40vw;
+}
+.pequeño{
+    flex-grow: 1;
+}
+.texto{
+    font-size: 2vw;
+}
+.centro{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+/* .Izq1{
     flex-grow: 3;
     display: flex;
     font-size: 2vw;
     text-align: center;
     align-items: center;
-}
-.Dcha1{
-    flex-grow: 1.5;
-}
+} */
+/* .Dcha1{
+    flex-grow: 1;
+} */
 .slider{
     width:95%;
     margin: auto;
@@ -172,17 +187,15 @@ body{
     grid-gap: 20px;
     padding: 0 0;
 }
-#p3{
-    display: flex;
-}
-.Dcha2{
+
+/* .Dcha2{
     flex-grow: 1;
     font-size: 2vw;
-}
-.Izq2{
+} */
+/* .Izq2{
     flex-grow: 3;
     min-width: 40vw;
-}
+} */
 .box img{
     width: 100%;
     height: 100%;
@@ -196,25 +209,23 @@ body{
     grid-column-start: span 2;
 }
 
-#p4{
-    display: flex;
-}
-.Izq3{
-    flex-grow: 1.5;
+/* .Izq3{
+    flex-grow: 1;
     margin-top: 50px;
     font-size: 2vw;
-}
-.Dcha3{
+} */
+/* .Dcha3{
     flex-grow: 1;
-}
-.historia{
+} */
+/* .historia{
     margin-top: 0;
     font-size: 2vw;
-}
+} */
 
 .img_historia{
     display: grid;
 }
+
 .img_historia img{
     width: 100%;
     height: 100%;
@@ -263,7 +274,19 @@ footer p{
 }
 
 @media screen and (max-width:600px){
-    
+    .pagina{
+        flex-wrap: wrap;
+    }
+    .titulo{
+        font-size: 10vw;
+    }
+    .texto{
+        font-size: 3vw;
+        order: 2;
+    }
+    .fotos{
+        order: 1;
+    }
     .galeria{
         padding: 15px;
         grid-template-columns: repeat(2, 1fr);
@@ -280,33 +303,19 @@ footer p{
     {
         grid-column-start: span 2;
     }
-    .Dcha2{
+    /* .Dcha2{
         font-size: 3vw;
     }
-    .T{
-        font-size: 10vw;
-    }
-    #p1{
-        flex-wrap: wrap;
-    }
-    #p2{
-        flex-wrap: wrap;
-    }
+    
     .Izq1{
         font-size: 3vw;
         order: 2;
-    }
+    } */
     
     .bloque a{
         font-size: 3vw;
     }
-    #p3{
-        flex-wrap: wrap;
-    }
-    #p4{
-        flex-wrap: wrap;
-    }
-    .Izq3{
+    /* .Izq3{
         order: 2;
     }
     .Dcha3{
@@ -314,11 +323,23 @@ footer p{
     }
     .historia{
         font-size: 3vw;
-    }	
+    }	 */
 }
 
 @media screen and (max-width:768px){
-    
+    .pagina{
+        flex-wrap: wrap;
+    }
+    .titulo{
+        font-size: 15vw;
+    }
+    .texto{
+        font-size: 4vw;
+        order: 2;
+    }
+    .fotos{
+        order: 1;
+    }
     .galeria{
         padding: 20px;
         grid-template-columns: repeat(2, 1fr);
@@ -327,11 +348,8 @@ footer p{
     {
         grid-column-start: span 2;
     }
-    .Dcha2{
+    /* .Dcha2{
         font-size: 4vw;
-    }
-    .T{
-        font-size: 10vw;
     }
     #p1{
         flex-wrap: wrap;
@@ -342,12 +360,12 @@ footer p{
     .Izq1{
         font-size: 4vw;
         order: 2;
-    }
+    } */
     
     .bloque a{
         font-size: 3vw;
     }
-    #p3{
+    /* #p3{
         flex-wrap: wrap;
     }
     #p4{
@@ -361,5 +379,5 @@ footer p{
     }
     .historia{
         font-size: 4vw;
-    }	
+    }	 */
 }
