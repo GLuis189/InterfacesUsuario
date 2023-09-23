@@ -10,17 +10,6 @@
 
 */
 
-@media screen and (max-width: 720px) {
-    #p1{
-        flex-wrap: wrap;
-    }
-    .bloque a{
-        font-size: 3vw;
-    }
-    #p3{
-        flex-wrap: wrap;
-    }
-}
 
 html{
     background-color: #1e49d5;
@@ -205,6 +194,7 @@ body{
 .box:nth-child(4){
     grid-column-start: span 2;
 }
+
 #p4{
     display: flex;
 }
@@ -271,3 +261,37 @@ footer p{
     color: #d82020;
 }
 
+@media screen and (max-width:600px){
+    
+    .galeria{
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box:nth-child(1)
+    {
+        grid-column-start: span 1;
+    }
+    .box:nth-child(4)
+    {
+        grid-column-start: span 1;
+    } 
+    .box:nth-child(7)
+    {
+        grid-column-start: span 2;
+    }
+    .Dcha2{
+        font-size: 4vw;
+    }
+    .T{
+        font-size: 10vw;
+    }
+    #p1{
+        flex-wrap: wrap;
+    }
+    .bloque a{
+        font-size: 3vw;
+    }
+    #p3{
+        flex-wrap: wrap;
+    }
+}
