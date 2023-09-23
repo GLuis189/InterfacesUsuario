@@ -1,4 +1,3 @@
-
 /* rojo: #E13726
     azul claro: #404395
     gris: #aba5d0
@@ -9,8 +8,6 @@
     Letra titulos:
 
 */
-
-
 html{
     background-color: #1e49d5;
     font-family: Arial, Helvetica, sans-serif;
@@ -130,23 +127,14 @@ body{
 }
 .texto{
     font-size: 2vw;
+    text-align: justify;
+    padding: 2%;
 }
 .centro{
     display: flex;
     text-align: center;
     align-items: center;
 }
-
-/* .Izq1{
-    flex-grow: 3;
-    display: flex;
-    font-size: 2vw;
-    text-align: center;
-    align-items: center;
-} */
-/* .Dcha1{
-    flex-grow: 1;
-} */
 .slider{
     width:95%;
     margin: auto;
@@ -187,15 +175,6 @@ body{
     grid-gap: 20px;
     padding: 0 0;
 }
-
-/* .Dcha2{
-    flex-grow: 1;
-    font-size: 2vw;
-} */
-/* .Izq2{
-    flex-grow: 3;
-    min-width: 40vw;
-} */
 .box img{
     width: 100%;
     height: 100%;
@@ -208,20 +187,6 @@ body{
 .box:nth-child(4){
     grid-column-start: span 2;
 }
-
-/* .Izq3{
-    flex-grow: 1;
-    margin-top: 50px;
-    font-size: 2vw;
-} */
-/* .Dcha3{
-    flex-grow: 1;
-} */
-/* .historia{
-    margin-top: 0;
-    font-size: 2vw;
-} */
-
 .img_historia{
     display: grid;
 }
@@ -302,28 +267,10 @@ footer p{
     .box:nth-child(7)
     {
         grid-column-start: span 2;
-    }
-    /* .Dcha2{
-        font-size: 3vw;
-    }
-    
-    .Izq1{
-        font-size: 3vw;
-        order: 2;
-    } */
-    
+    } 
     .bloque a{
         font-size: 3vw;
     }
-    /* .Izq3{
-        order: 2;
-    }
-    .Dcha3{
-        order: 1;
-    }
-    .historia{
-        font-size: 3vw;
-    }	 */
 }
 
 @media screen and (max-width:768px){
@@ -348,36 +295,7 @@ footer p{
     {
         grid-column-start: span 2;
     }
-    /* .Dcha2{
-        font-size: 4vw;
-    }
-    #p1{
-        flex-wrap: wrap;
-    }
-    #p2{
-        flex-wrap: wrap;
-    }
-    .Izq1{
-        font-size: 4vw;
-        order: 2;
-    } */
-    
     .bloque a{
         font-size: 3vw;
     }
-    /* #p3{
-        flex-wrap: wrap;
-    }
-    #p4{
-        flex-wrap: wrap;
-    }
-    .Izq3{
-        order: 2;
-    }
-    .Dcha3{
-        order: 1;
-    }
-    .historia{
-        font-size: 4vw;
-    }	 */
 }
