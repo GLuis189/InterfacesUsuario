@@ -1,7 +1,7 @@
 html{
     background-color: #07278f;
     font-family:'Nunito Sans', Arial, Helvetica, sans-serif;
-    padding: 20px;
+    padding: 10px;
     scroll-behavior: smooth;
 }
 
@@ -10,6 +10,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: white;
+    color: #01072b;
 }
 .pagina{
     display: flex;
@@ -88,7 +89,7 @@ body{
 }
 .divisor{
     background-color: #1e49d5;
-    height: 10px;
+    height: 5px;
 }
 .titulo{
     font-size: 10dvw;
@@ -109,16 +110,39 @@ body{
 .pequeño{
     flex-grow: 1;
 }
+
 .texto{
     font-size: 2vw;
     text-align: justify;
     padding: 2%;
 }
+
+.menu li{
+    font-family: 'Jockey One';
+    font-size: 1.75vw;
+    color: #1e49d5;
+}
+.menu p{
+    font-family: 'Nunito Sans';
+    font-size: 1.25vw;
+    font-style: oblique;
+    color: #01072b;
+}
+.menu bdi{
+    color:#df1d1d;
+}
 .centro{
     display: flex;
     text-align: center;
     align-items: center;
+    margin-top: 11.5%;
 }
+.italic{
+    font-style: italic;
+    text-shadow: 1px 2px 2px#8e9ecf;
+    
+}
+
 .slider{
     width:95%;
     margin: auto;
@@ -151,7 +175,7 @@ body{
 
 }
 .galeria{
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -263,6 +287,15 @@ footer p{
     #logo{
         width: auto;
     }
+    .centro{
+        margin-top: auto;
+    }
+    .menu li{
+        font-size: 5vw;
+    }
+    .menu p{
+        font-size: 3vw;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -292,5 +325,14 @@ footer p{
     }
     #logo{
         width: auto;
+    }
+    .centro{
+        margin-top: auto;
+    }
+    .menu li{
+        font-size: 5vw;
+    }
+    .menu p{
+        font-size: 3vw;
     }
 }
