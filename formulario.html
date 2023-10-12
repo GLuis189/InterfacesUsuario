@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foster's Hollywood Formulario</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 class="titulo">Registro de Usuarios</h1>
+    <form id="registro" name="registro" method="get">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" placeholder="Introduce el DNI."><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce el Nombre."><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Introduce el Apellido."><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" placeholder="Introduce el Teléfono."><br>
+        <label for="email">Correo electrónico:</label>
+        <input type="text" id="email" name="email" placeholder="Introduce el Correo electrónico."><br>
+        <input type="button" value="Enviar" style="cursor: pointer;" onclick="validarFormulario()">
+        <input type="reset" value="Limpiar" style="cursor: pointer;">
+        <a href="/index.html">
+            <input type="button" value="Cancelar" style="cursor: pointer;">
+        </a>
+    </form>
+</body>
+</html>

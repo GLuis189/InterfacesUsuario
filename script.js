@@ -33,4 +33,11 @@ function validarFormulario() {
     }
 
     alert('Formulario enviado correctamente');
+    window.location.href = 'index.html';
+    document.cookie = 'dni=' + dni + '; max-age=3600 path=/';
+    document.cookie = 'nombre=' + nombre + '; max-age=3600 path=/';
+    document.cookie = 'apellido=' + apellido + '; max-age=3600 path=/';
+    document.cookie = 'telefono=' + telefono + '; max-age=3600 path=/';
+    document.cookie = 'email=' + email + '; max-age=3600 path=/';
+
 }
