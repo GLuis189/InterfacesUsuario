@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-
+    <script src="script.js"></script>
 </head>
 <body>
     <section id="p1" class="pagina">
@@ -31,7 +31,9 @@
             <div class="bloque">
                 <a href="#p4" class="link">HISTORIA</a>
             </div>
-            <div class="bloque"><p class="link">LOCALES</p></div>
+            <div class="bloque">
+                <a href="#p5" class="link">REGISTRO DE USUARIOS</a>
+            </div>
             <div class="bloque"><p class="link">CONOCENOS</p></div>
             <div class="bloque"><p class="link">OFERTAS</p></div>
         </div>
@@ -160,6 +162,25 @@
                 <img src="media/images/f3.jpg" alt="">
             </div>
         </div>
+    </section>
+    <div class="divisor"></div>
+    <section id="p5">
+        <h1 class="titulo">Registro de Usuarios</h1>
+        <form id="registro" name="registro" method="get">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" placeholder="Introduce el DNI."><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce el Nombre."><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Introduce el Apellido."><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Introduce el Teléfono."><br>
+            <label for="email">Correo electrónico:</label>
+            <input type="text" id="email" name="email" placeholder="Introduce el Correo electrónico."><br>
+            <input type="button" value="Enviar" onclick="validarFormulario()">
+            <input type="reset" value="Cancelar">
+            <input type="reset" value="Limpiar">
+        </form>
     </section>
     <div class="fin"></div>
     <footer>
