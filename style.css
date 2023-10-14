@@ -425,7 +425,7 @@ footer p{
     border: 2px solid #1e49d5;
     border-radius: 4px;
 }
-#sugerencia{
+#form_sugerencia{
     width: 50dvh;
     display: block;
     margin: auto;
@@ -433,7 +433,15 @@ footer p{
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
     margin-bottom: 10dvh;
 }
-#sugerencia input{
+#form_sugerencia input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #1e49d5;
+    border-radius: 4px;
+}
+#form_sugerencia textarea{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
