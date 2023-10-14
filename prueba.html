@@ -57,6 +57,16 @@
     padding: 10px;
     background-color: #f8f9fa;
 }
+#temporizador {
+    animation: temporizador 1s infinite;
+}
+
+@keyframes temporizador {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
+
 </style>
 <script>
 /* Aquí va tu JavaScript */
@@ -69,7 +79,9 @@ function showStep(step) {
     });
     document.getElementById(step).style.display = 'block';
     currentStep = step;
-    console.log(currentStep);
+    if (step === 'step3') {
+        iniciarTemporizador();
+    }
 }
 
 function nextStep() {
@@ -135,6 +147,25 @@ function actualizarCarrito() {
 function actualizarTotal() {
     document.getElementById('total').innerText = 'Total: ' + total;
 }
+var tiempoRestante = 10 * 60; // 10 minutos en segundos
+
+function actualizarTemporizador() {
+    var minutos = Math.floor(tiempoRestante / 60);
+    var segundos = tiempoRestante % 60;
+    document.getElementById('temporizador').innerText = minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
+}
+
+function iniciarTemporizador() {
+    actualizarTemporizador();
+    var intervalo = setInterval(function() {
+        tiempoRestante--;
+        actualizarTemporizador();
+        if (tiempoRestante <= 0) {
+            clearInterval(intervalo);
+        }
+    }, 1000);
+}
+
 </script>
 </head>
 <body>
@@ -285,7 +316,11 @@ function actualizarTotal() {
             </div>
             
             <div id="step3" style="display: none; padding-top: 50px;">
-                <img src="ruta/a/tu/imagen.jpg" alt="Una imagen">
+                    <h1>Paso3</h1>
+                    <h2>Estado del pedido</h2>
+                    <p>Tu pedido se ha realizado exitosamente.</p>
+                    <p>Tiempo estimado de entrega:</p>
+                    <div id="temporizador">10:00</div>     
             </div>
         </div>
         <div class="carrito">
