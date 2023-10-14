@@ -50,7 +50,7 @@ const btn_right = document.querySelector("#btn_r_h");
 
 slider_historia.insertAdjacentElement('afterbegin', slider_historia_img_last);
 
-function next() {
+function nexth() {
     let slider_historia_img_first = document.querySelectorAll(".slider_historia_img")[0];
     slider_historia.style.marginLeft = "-200%";
     slider_historia.style.transition = "all 0.5s";
@@ -60,7 +60,7 @@ function next() {
         slider_historia.style.marginLeft = "-100%";
     }, 500);
 }
-function prev() {
+function prevh() {
     let slider_historia_img = document.querySelectorAll(".slider_historia_img");
     let slider_historia_img_last = slider_historia_img[slider_historia_img.length - 1];
     slider_historia.style.marginLeft = "0";
@@ -72,12 +72,53 @@ function prev() {
     }, 500);
 }
 btn_right.addEventListener('click', function () {
-    next();
+    nexth();
 });
 btn_left.addEventListener('click', function () {
-    prev();
+    prevh();
 });
 
 setInterval(function () {
-    next();
+    nexth();
+}, 5000);
+
+const slider_menu = document.querySelector("#slider_menu");
+let slider_menu_img = document.querySelectorAll(".slider_menu_img");
+let slider_menu_img_last = slider_menu_img[slider_menu_img.length - 1];
+
+const btn_left_m = document.querySelector("#btn_l_m");
+const btn_right_m = document.querySelector("#btn_r_m");
+
+slider_menu.insertAdjacentElement('afterbegin', slider_menu_img_last);
+
+function nextm() {
+    let slider_menu_img_first = document.querySelectorAll(".slider_menu_img")[0];
+    slider_menu.style.marginLeft = "-200%";
+    slider_menu.style.transition = "all 0.5s";
+    setTimeout(function () {
+        slider_menu.style.transition = "none";
+        slider_menu.insertAdjacentElement('beforeend', slider_menu_img_first);
+        slider_menu.style.marginLeft = "-100%";
+    }, 500);
+}
+function prevm() {
+    let slider_menu_img = document.querySelectorAll(".slider_menu_img");
+    let slider_menu_img_last = slider_menu_img[slider_menu_img.length - 1];
+    slider_menu.style.marginLeft = "0";
+    slider_menu.style.transition = "all 0.5s";
+    setTimeout(function () {
+        slider_menu.style.transition = "none";
+        slider_menu.insertAdjacentElement('afterbegin', slider_menu_img_last);
+        slider_menu.style.marginLeft = "-100%";
+    }, 500);
+}
+btn_right_m.addEventListener('click', function () {
+    nextm();
+});
+btn_left_m.addEventListener('click', function () {
+    prevm();
+});
+
+setInterval(function () {
+    nexth();
 }, 5000);
