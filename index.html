@@ -13,7 +13,7 @@
 </head>
 <body>
     <section id="p1" class="pagina">
-        <div id="P_Izq">
+        <div class="P_Izq">
                 <img id="logo" src="media/images/FOSTER-HOLLYWOOD.png" alt="">
             <div id="video">
                 <video autoplay muted loop>
@@ -22,7 +22,7 @@
                 </video>
             </div>
         </div>
-        <div id="P_Dcha">
+        <div class="P_Dcha">
             <div class="bloque">
                 <a href="#p2" class="link">NOVEDADES</a>
             </div>
@@ -185,37 +185,48 @@
     <div class="divisor"></div>
     <section id="p7">
         <h1 class="titulo">Contacto</h1>
-        <p>
-        Contáctanos
-
-        Nos encantaría saber de ti. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.
-
-        Correo electrónico: info@tupaginaweb.com
-
-        Teléfono: +34 123 456 789
-
-        Dirección: Calle de la Web, 123, Madrid, España
-
-        Nuestro equipo de atención al cliente está disponible de lunes a viernes, de 9:00 a 18:00. Nos esforzamos por responder a todas las consultas en un plazo de 24 horas.
-
-        También puedes encontrarnos en las redes sociales:
-
-        <ul class="linkhover">
-            <li ><a href="https://www.tripadvisor.es/Restaurant_Review-g187514-d5794920-Reviews-Foster_s_Hollywood-Madrid.html" target="_blank" style="color: rgb(233, 250, 0);">Tripadvisor</a></li>
-            <li><a href="https://www.instagram.com/fostershollywood/" target="_blank" style="color: rgb(233, 250, 0); ">Instagram</a></li>
-            <li><a href="https://www.facebook.com/fostershollywood/?locale=es_ES" target="_blank" style="color: rgb(233, 250, 0);">Facebook</a></li>
-        </ul>
-        ¡Esperamos tener noticias tuyas pronto!
+        <p class="mensaje_contacto">
+            Si tienes alguna duda en cuanto a reservas y horarios contacta
+            directamente con el restaurante.
         </p>
-        <p>
-            Encuentra nuestros restaurantes en la siguiente página web: 
-            <a href="https://fostershollywood.es/restaurantes">Restaurantes</a>
+        <div class="cuadro">
+            <a href="https://fostershollywood.es/restaurantes" target="_blank" style="color: white; text-decoration: none
+            ;">ENCUENTRA TU RESTAURANTE</a>
+        </div>
+        <p class="mensaje_contacto">
+            Nos encantaría saber de ti. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.          
         </p>
-        <p>
-            Si tienes alguna sugerencia puedes mandarnosla mediante el siguiente formulario         
-            <button>
-                <a href="/contacto.html" class="sugerencia">Formulario</a>
+        <div class="cuadro">
+            <button id="formulario_c">
+                <a href="contacto.html" id="formulario_lc">FORMULARIO</a>
             </button>
+        </div>
+        <div class="contact">
+            <div>
+                <h2 class="minititle">Contáctanos</h2>
+                <p id="contactanos">
+                Correo electrónico: fostershollywood@gmail.com
+                <br>
+                Teléfono: +34 646 727 046
+                <br>
+                Dirección: S.A Camino de la Zarzuela, 1, Madrid
+                </p>
+            </div>
+            <div>
+                <h2 class="minititle">Nuestras redes sociales </h2>
+                <ul class="linkhover">
+                    <li ><a href="https://www.tripadvisor.es/Restaurant_Review-g187514-d5794920-Reviews-Foster_s_Hollywood-Madrid.html" target="_blank" class="red">Tripadvisor</a></li>
+                    <li><a href="https://www.instagram.com/fostershollywood/" target="_blank" style="color:white; text-decoration: none; " class="red">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/fostershollywood/?locale=es_ES" target="_blank" style="color:white; text-decoration: none;" class="red">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <p id="cont1">
+            Nuestro equipo de atención al cliente está disponible de lunes a viernes, de 9:00 a 18:00. 
+            <br> esforzamos por responder a todas las consultas en un plazo de 24 horas.
+        </p>
+        <p id="cont2">
+            ¡ESPERAMOS TENER <bdi id="cont3">NOTICIAS TUYAS PRONTO!</bdi>  
         </p>
 
     </section>
