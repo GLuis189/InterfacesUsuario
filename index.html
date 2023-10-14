@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
+    
 </head>
 <body>
     <section id="p1" class="pagina">
@@ -35,7 +36,7 @@
                 <a href="/formulario.html" class="link">REGISTRO DE USUARIOS</a>
             </div>
             <div class="bloque">
-                <p class="link">MENU</p>
+                <a href="/menu.html" class="link">MENU</a>
             </div>
             <div class="bloque">
                 <a href="#p7" class="link">CONTACTO</a>
@@ -160,16 +161,59 @@
         </div>
         <div class="grande fotos">
             <h1 class="titulo">HISTORIA</h1>
-            <div class="img_historia">
-                <img src="media/images/f1.jpeg" alt="">
-                <img src="media/images/f2.jpg" alt="">
-                <img src="media/images/f3.jpg" alt="">
+            <div class="container_historia ">
+                <div class="slider_historia" id="slider_historia">
+                    <div class="slider_historia_img">
+                        <img src="media/images/f1.jpeg" alt="" class="slider_img">
+                    </div>
+                    <div class="slider_historia_img">
+                        <img src="media/images/f2.jpg" alt="" class="slider_img">
+                    </div>
+                    <div class="slider_historia_img">
+                        <img src="media/images/f3.jpg" alt="" class="slider_img">
+                    </div>
+                    <div class="slider_btn_h btn_r" id="btn_r_h">&#10095;</div>
+                    <div class="slider_btn_h btn_l" id="btn_l_h">&#10094;</div>
+                </div>
             </div>
         </div>
     </section>
     <div class="divisor"></div>
-    <section id="#p7">
+    <section id="p7">
         <h1 class="titulo">Contacto</h1>
+        <p>
+        Contáctanos
+
+        Nos encantaría saber de ti. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.
+
+        Correo electrónico: info@tupaginaweb.com
+
+        Teléfono: +34 123 456 789
+
+        Dirección: Calle de la Web, 123, Madrid, España
+
+        Nuestro equipo de atención al cliente está disponible de lunes a viernes, de 9:00 a 18:00. Nos esforzamos por responder a todas las consultas en un plazo de 24 horas.
+
+        También puedes encontrarnos en las redes sociales:
+
+        <ul class="linkhover">
+            <li ><a href="https://www.tripadvisor.es/Restaurant_Review-g187514-d5794920-Reviews-Foster_s_Hollywood-Madrid.html" target="_blank" style="color: rgb(233, 250, 0);">Tripadvisor</a></li>
+            <li><a href="https://www.instagram.com/fostershollywood/" target="_blank" style="color: rgb(233, 250, 0); ">Instagram</a></li>
+            <li><a href="https://www.facebook.com/fostershollywood/?locale=es_ES" target="_blank" style="color: rgb(233, 250, 0);">Facebook</a></li>
+        </ul>
+        ¡Esperamos tener noticias tuyas pronto!
+        </p>
+        <p>
+            Encuentra nuestros restaurantes en la siguiente página web: 
+            <a href="https://fostershollywood.es/restaurantes">Restaurantes</a>
+        </p>
+        <p>
+            Si tienes alguna sugerencia puedes mandarnosla mediante el siguiente formulario         
+            <button>
+                <a href="/contacto.html" class="sugerencia">Formulario</a>
+            </button>
+        </p>
+
     </section>
     <div class="fin"></div>
     <footer>

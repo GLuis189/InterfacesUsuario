@@ -41,3 +41,43 @@ function validarFormulario() {
     document.cookie = 'email=' + email + '; max-age=3600 path=/';
 
 }
+const slider_historia = document.querySelector("#slider_historia");
+let slider_historia_img = document.querySelectorAll(".slider_historia_img");
+let slider_historia_img_last = slider_historia_img[slider_historia_img.length - 1];
+
+const btn_left = document.querySelector("#btn_l_h");
+const btn_right = document.querySelector("#btn_r_h");
+
+slider_historia.insertAdjacentElement('afterbegin', slider_historia_img_last);
+
+function next() {
+    let slider_historia_img_first = document.querySelectorAll(".slider_historia_img")[0];
+    slider_historia.style.marginLeft = "-200%";
+    slider_historia.style.transition = "all 0.5s";
+    setTimeout(function () {
+        slider_historia.style.transition = "none";
+        slider_historia.insertAdjacentElement('beforeend', slider_historia_img_first);
+        slider_historia.style.marginLeft = "-100%";
+    }, 500);
+}
+function prev() {
+    let slider_historia_img = document.querySelectorAll(".slider_historia_img");
+    let slider_historia_img_last = slider_historia_img[slider_historia_img.length - 1];
+    slider_historia.style.marginLeft = "0";
+    slider_historia.style.transition = "all 0.5s";
+    setTimeout(function () {
+        slider_historia.style.transition = "none";
+        slider_historia.insertAdjacentElement('afterbegin', slider_historia_img_last);
+        slider_historia.style.marginLeft = "-100%";
+    }, 500);
+}
+btn_right.addEventListener('click', function () {
+    next();
+});
+btn_left.addEventListener('click', function () {
+    prev();
+});
+
+setInterval(function () {
+    next();
+}, 5000);
