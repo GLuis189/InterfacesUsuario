@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Aquí va tu CSS */
+.breadcrumb {
+  position: fixed;
+  top: 0;
+  left: 25%;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.breadcrumb li a {
+  color: #007bff;
+  text-decoration: none;
+  
+}
+.menu{
+    display: flex;
+}
+.interfaz{
+    background-color: grey;
+    flex-grow: 3;
+}
+.carrito{
+    background-color: lightblue;
+    flex-grow: 1;
+}
+.producto button{
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 2dvh;
+}
+.productos li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#contador {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+</style>
+<script>
+/* Aquí va tu JavaScript */
+var currentStep = 'step1';
+
+function showStep(step) {
+    var allSteps = ['step1', 'step2', 'step3'];
+    allSteps.forEach(function(s) {
+        document.getElementById(s).style.display = 'none';
+    });
+    document.getElementById(step).style.display = 'block';
+    document.getElementById(ste).style.display = 'none';
+    currentStep = step;
+    console.log(currentStep);
+}
+
+function nextStep() {
+    var nextSteps = {
+        'step1': 'step2',
+        'step2': 'step3',
+        'step3': 'step1'
+    };
+    showStep(nextSteps[currentStep]);
+}
+
+function previousStep() {
+    var previousSteps = {
+        'step1': 'step3',
+        'step2': 'step1',
+        'step3': 'step2'
+    };
+    showStep(previousSteps[currentStep]);
+}
+var carrito = {};
+var total = 0;
+
+function agregarProducto(producto, precio) {
+    precio = parseFloat(precio); // Convierte el precio a un número
+    if (carrito[producto]) {
+        carrito[producto].cantidad++;
+    } else {
+        carrito[producto] = {cantidad: 1, precio: precio};
+    }
+    total += precio;
+    actualizarCarrito();
+    actualizarContador();
+    actualizarTotal();
+}
+
+function eliminarProducto(producto, precio) {
+    if (carrito[producto] && carrito[producto].cantidad > 0) {
+        carrito[producto].cantidad--;
+        total -= precio;
+        if (carrito[producto].cantidad === 0) {
+            delete carrito[producto];
+        }
+        actualizarCarrito();
+        actualizarContador();
+        actualizarTotal();
+    }
+}
+function actualizarContador() {
+    var contador = 0;
+    for (var producto in carrito) {
+        contador += carrito[producto].cantidad;
+    }
+    document.getElementById('contador').innerText = contador;
+}
+function actualizarCarrito() {
+    var carritoDiv = document.getElementById('carrito');
+    carritoDiv.innerHTML = '';
+    for (var producto in carrito) {
+        carritoDiv.innerHTML += producto + ': ' + carrito[producto].cantidad + '<br>';
+    }
+}
+
+function actualizarTotal() {
+    document.getElementById('total').innerText = 'Total: ' + total;
+}
+</script>
+</head>
+<body>
+    <ul class="breadcrumb">
+        <li><a href="#" >Paso1</a></li>
+        <li><a href="#" >Paso2</a></li>
+        <li><a href="#" >Paso3</a></li>
+    </ul>
+    <div class="menu">
+        <div class="interfaz">
+            <div id="step1" class="box" style="display: none; padding-top: 50px;">
+                <div class="entrantes">
+                    <h1>Entrantes</h1>
+                    <ul class="productos">
+                        <li class="producto">
+                            <span>Smoked Wings: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Smoked Wings', 10)">+</button>
+                                <button onclick="eliminarProducto('Smoked Wings', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Hollywood Combo: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Hollywood Combo', 10)">+</button>
+                                <button onclick="eliminarProducto('Hollywood Combo', 10)">-</button>
+                            </div>
+
+                        </li>
+                        <li class="producto">
+                            <span>Bacon & Cheese Fries: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Bacon & cheese Fries', 10)">+</button>
+                                <button onclick="eliminarProducto('Bacon & cheese Fries', 10)">-</button>
+                            </div>
+
+                        </li>
+                        <li class="producto">
+                            <span>Choice Chicken Finguers: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Choice Chicken Finguers', 10)">+</button>
+                                <button onclick="eliminarProducto('Choice Chicken Finguers', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Ribs Bites: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Ribs Bites', 10)">+</button>
+                                <button onclick="eliminarProducto('Ribs Bites', 10)">-</button>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+                <div class="hamburguesas">
+                    <h1>Hamburguesas</h1>
+                    <ul class="productos">
+                        <li class="producto">
+                            <span>Smashing Burguer: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Smashing Burguer', 10)">+</button>
+                                <button onclick="eliminarProducto('Smashing Burguer', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Iberiquísima Burguer: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Iberiquísima Burguer', 10)">+</button>
+                                <button onclick="eliminarProducto('Iberiquísima Burguer', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Chef Chicken Burguer: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Chef Chicken Burguer', 10)">+</button>
+                                <button onclick="eliminarProducto('Chef Chicken Burguer', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Black Label Burguer: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Black Label Burguer', 10)">+</button>
+                                <button onclick="eliminarProducto('Black Label Burguer', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Slow Smoked: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Slow Smoked', 10)">+</button>
+                                <button onclick="eliminarProducto('Slow Smoked', 10)">-</button>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+                <div class="postres">
+                    <h1>Postres</h1>
+                    <ul class="productos">
+                        <li class="producto">
+                            <span>Milshake: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Milshake', 10)">+</button>
+                                <button onclick="eliminarProducto('Milshake', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>New York Cheesecake: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('New York Cheesecake', 10)">+</button>
+                                <button onclick="eliminarProducto('New York Cheesecake', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Chef Chicken Burguer: <span class="precio">10</span></span> 
+                            <div class="botones">
+                                <button onclick="agregarProducto('Chef Chicken Burguer', 10)">+</button>
+                                <button onclick="eliminarProducto('Chef Chicken Burguer', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Avocado: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Avocado', 10)">+</button>
+                                <button onclick="eliminarProducto('Avocado', 10)">-</button>
+                            </div>
+                        </li>
+                        <li class="producto">
+                            <span>Black & White Cake: <span class="precio">10</span></span>
+                            <div class="botones">
+                                <button onclick="agregarProducto('Black & White Cake', 10)">+</button>
+                                <button onclick="eliminarProducto('Black & White Cake', 10)">-</button>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+            </div>
+            <div id="step2" style="display: none; padding-top: 50px;">
+                <h1>Revisa tu pedido y añade método de pago</h1>
+                <form autocomplete="nope">
+                    <label >Titular de la tarjeta:</label><br>
+                    <input type="text"><br>
+                    <label>Número de la tarjeta:</label><br>
+                    <input type="text"><br>
+                    <label>Fecha de caducidad:</label><br>
+                    <input type="text"><br>
+                    <label>CVV:</label><br>
+                    <input type="text"><br><br>
+                </form>
+                
+            </div>
+            
+            <div id="step3" style="display: none; padding-top: 50px;">
+                <img src="ruta/a/tu/imagen.jpg" alt="Una imagen">
+            </div>
+        </div>
+        <div class="carrito">
+            <h1>Carrito:</h1>
+            <div id="carrito"></div>
+            <h1 id="total">Total: 0€</h1>
+            <div id="contador">0</div>
+            <button onclick="previousStep()">Anterior</button>
+            <button onclick="nextStep()">Siguiente</button> 
+        </div>
+        <script>showStep('step1');</script>
+    </div>
+</body>
+</html>
