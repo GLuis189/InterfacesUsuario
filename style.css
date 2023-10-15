@@ -360,10 +360,6 @@ body{
 .btn_l{
     left: 10px;
 }
-.fin{
-    height: 15dvh;
-    background-color: #1e49d5;
-}
 .Redes{
     list-style-position: inside;
     float: left;
@@ -375,7 +371,7 @@ body{
     margin-top: 10px;
     margin-left: 15px;
 } 
-.Políticas{
+.Politicas{
     float: right;
     text-align: right;
     width: 33%;
@@ -398,7 +394,7 @@ footer {
 footer p{
     margin: 3px;
 }
-.Políticas :hover{
+.Politicas :hover{
     color: white;
 }
 .linkhover :hover{
