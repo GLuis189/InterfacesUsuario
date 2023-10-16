@@ -18,7 +18,7 @@ body{
 .contact{
     margin-top: 20px;
     display: flex;
-    background-image:url("media/images/madera.jpeg");
+    background-image:url("../media/images/madera.jpeg");
     background-size: 100%;
     background-position: -500%;
 }
@@ -116,22 +116,22 @@ body{
     align-items: center;
 }
 .bloque:nth-child(1){
-    background-image: url("media/images/novedades.jpg");
+    background-image: url("../media/images/novedades.jpg");
 }
 .bloque:nth-child(2){
-    background-image: url("media/images/costillar.jpg");
+    background-image: url("../media/images/costillar.jpg");
 }
 .bloque:nth-child(3){
-    background-image: url("media/images/origen.jpg");
+    background-image: url("../media/images/origen.jpg");
 }
 .bloque:nth-child(4){
-    background-image: url("media/images/logo_locales.png");
+    background-image: url("../media/images/logo_locales.png");
 }
 .bloque:nth-child(5){
-    background-image: url("media/images/descargar.png");
+    background-image: url("../media/images/descargar.png");
 }
 .bloque:nth-child(6){
-    background-image: url("media/images/logo.jpg");
+    background-image: url("../media/images/logo.jpg");
 }
 
 .link{
@@ -179,7 +179,7 @@ body{
 }
 
 .minititle{
-    font-size: 4vw;
+    font-size: 3.9vw;
     font-family: 'Jockey One';
     text-align: center;
     color:  #ee0a0a;
@@ -281,6 +281,7 @@ body{
     overflow: hidden;
     box-shadow: 0 0 0 10px #efefef;
     position: relative;
+    margin-top: 200px;
 }
 .slider_historia{
     display: flex;
@@ -443,6 +444,9 @@ footer p{
     .menu p{
         font-size: 3vw;
     }
+    .container_slider{
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -469,9 +473,21 @@ footer p{
         margin-top: auto;
     }
     .menu li{
-        font-size: 5vw;
+        font-size: 6vw;
     }
     .menu p{
-        font-size: 3vw;
+        font-size: 4vw;
+    }
+    #p7 p{
+        font-size: 4vw;
+    }
+    #p7 a{
+        font-size: 3.5vw;
+    }
+    #p7 h2{
+        font-size: 5vw;
+    }
+    .container_slider{
+        margin-top: 20px;
     }
 }
