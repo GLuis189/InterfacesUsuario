@@ -6,8 +6,8 @@ html{
 }
 
 body{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     background-color: white;
     color: #01072b;
@@ -39,8 +39,8 @@ body{
     font-size: 5dvw;
     font-weight: lighter;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding-bottom: 20px; ;
     color:  #df1d1d;
     font-family: 'Jockey One';
     margin-bottom: 50px;
@@ -79,6 +79,8 @@ body{
 #p1{
     background-color: #07278f;
 }
+
+
 
 .P_Izq{
     display: flex;
@@ -165,10 +167,6 @@ body{
     font-size: 2vw;
     font-family: 'Jockey One';
 }
-
-
-
-
 .titulo{
     font-size: 10dvw;
     font-weight: bold;
@@ -222,7 +220,7 @@ body{
     color: #01072b;
 }
 
-.menu bdi{
+.menu span{
     color:#df1d1d;
 }
 .centro{
@@ -275,38 +273,6 @@ body{
     100% {margin-left: -200%;}
 
 }
-/* .galeria{
-    max-width: 1500px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px;
-    grid-gap: 20px;
-    padding: 0 0;
-}
-.box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.box:nth-child(1){
-    grid-column-start: span 2;
-}
-
-.box:nth-child(4){
-    grid-column-start: span 2;
-} */
-/* .img_historia{
-    display: grid;
-    margin: 2%;
-}
-
-.img_historia img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 .container_slider{
     width: 100%;
     max-width: 1500px;; 
@@ -367,7 +333,7 @@ body{
     width: 33%;
     padding: 5px;
     box-sizing: border-box;
-    color: rgb(233, 250, 0);
+    color: white;
     margin-top: 10px;
     margin-left: 15px;
 } 
@@ -381,26 +347,26 @@ body{
     margin-right: 15px;
 }
 footer {
+    position: absolute;
     font-size: 13px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background-color:  #9e0627 ;
+    background-color: #020d33;
     opacity: 0.9;
-    color: rgb(233, 250, 0);
+    color:white;
     text-align: left;
 }
 footer p{
     margin: 3px;
 }
-.Politicas :hover{
-    color: white;
-}
+
 .linkhover :hover{
-    color: white;
-    list-style-type: lower-roman;
+    color: #df1d1d;
 }
+.linkhover {
+    color: white;
+    text-decoration: none;
+}
+
 #p5{
     display: block
 } 
