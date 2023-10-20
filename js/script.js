@@ -90,3 +90,17 @@ function createSlider(sliderId, btnLeftId, btnRightId, sliderImgClass) {
 
 createSlider("#slider_historia", "#btn_l_h", "#btn_r_h", ".slider_historia_img");
 createSlider("#slider_menu", "#btn_l_m", "#btn_r_m", ".slider_menu_img");
+
+const hamburguesa = document.querySelector('#hamburguesa');
+const abrir = document.querySelector('#abrir');
+const cerrar = document.querySelector('#cerrar');
+
+abrir.addEventListener('click', function () {
+    hamburguesa.classList.add('hamburguesa_visible');
+}
+);
+
+cerrar.addEventListener('click', function () {
+    hamburguesa.classList.remove('hamburguesa_visible');
+}
+);

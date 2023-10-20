@@ -80,8 +80,6 @@ body{
     background-color: #07278f;
 }
 
-
-
 .P_Izq{
     display: flex;
     flex-grow: 1;
@@ -415,7 +413,84 @@ footer p{
     border-radius: 4px;
 }
 
+.breadcrumb {
+    position: fixed;
+    top: 0;
+    left: 25%;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.breadcrumb li {
+display: inline;
+margin-right: 10px;
+}
+
+.breadcrumb li a {
+color: #007bff;
+text-decoration: none;
+
+}
+.menu{
+    display: flex;
+}
+.interfaz{
+    background-color: grey;
+    flex-grow: 3;
+}
+.carrito{
+    background-color: lightblue;
+    flex-grow: 1;
+}
+.producto button{
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 2dvh;
+}
+.productos li {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+#contador {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+#temporizador {
+    animation: temporizador 1s infinite;
+}
+
+#step1{
+    display: none;
+    padding-top: 50 px;
+}
+#step2{
+    display: none;
+    padding-top: 50 px;
+}
+#step3{
+    display: none;
+    padding-top: 50 px;
+}
+
+@keyframes temporizador {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
 @media screen and (max-width:600px){
+
     .pagina{
         flex-wrap: wrap;
     }

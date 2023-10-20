@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foster's Hollywood</title>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-    <script defer src="js/script.js"></script>
+    <script defer src="/js/script.js"></script>
     
 </head>
 <body>
     <section id="p1" class="pagina">
-        <div class="P_Izq">
+        <article class="P_Izq">
                 <img id="logo" src="media/images/FOSTER-HOLLYWOOD.png" alt="Foster’s Hollywood">
             <div id="video">
                 <video autoplay muted loop>
@@ -21,36 +21,38 @@
                     Tu navegador no soporta el elemento video.
                 </video>
             </div>
-        </div>
-        <div class="P_Dcha">
-            <div class="bloque">
-                <a href="#p2" class="link">NOVEDADES</a>
-            </div>
-            <div class="bloque">
-                <a href="#p3" class="link">CARTA</a>
-            </div>
-            <div class="bloque">
-                <a href="#p4" class="link">HISTORIA</a>
-            </div>
-            <div class="bloque">
-                <a href="formulario.html" class="link">REGISTRO DE USUARIOS</a>
-            </div>
-            <div class="bloque">
-                <a href="menu.html" class="link">MENU</a>
-            </div>
-            <div class="bloque">
-                <a href="#p7" class="link">CONTACTO</a>
-            </div>
-        </div>
+        </article>
+        <article class="P_Dcha">
+            <nav class="enlaces">
+                <div class="bloque">
+                    <a href="#p2" class="link">NOVEDADES</a>
+                </div>
+                <div class="bloque">
+                    <a href="#p3" class="link">CARTA</a>
+                </div>
+                <div class="bloque">
+                    <a href="#p4" class="link">HISTORIA</a>
+                </div>
+                <div class="bloque">
+                    <a href="modulos/formulario.html" class="link">REGISTRO DE USUARIOS</a>
+                </div>
+                <div class="bloque">
+                    <a href="modulos/menu.html" class="link">MENU</a>
+                </div>
+                <div class="bloque">
+                    <a href="#p7" class="link">CONTACTO</a>
+                </div>
+            
+        </article>
     </section>
     <section id="p2" class="pagina">
-        <div class="grande texto centro">
+        <article class="grande texto centro">
             <p>En <strong>Foster's Hollywood</strong> siempre tenemos noticias para ti. 
                 Si quieres consultar nuestras <i>novedades</i>, aperturas de los nuevos restaurantes, 
                 nuestras <i>ofertas y promociones</i> o estar a la última, echa un vistazo y <em>¡mantente 
                     informado de lo más fresco!</em></p>
-        </div>
-        <div class="pequeño">
+        </article>
+        <article class="pequeño">
             <h1 class="titulo">NOVEDADES</h1>
             <div class="slider">
                 <ul>
@@ -59,12 +61,12 @@
                     <li><img src="media/images/n3.jpg" alt="Hazte fosteriano y disfruta de un 15% de descuento en tu segunda visita"></li>
                 </ul>
             </div>
-        </div>
+        </article>
         
     </section>
-    <div class="divisor"></div>
+    <!-- <div class="divisor"></div> -->
     <section id="p3" class="pagina">
-        <div class="grande fotos">
+        <article class="grande fotos">
             <h1 class="titulo">CARTA</h1>
             <div class="container_slider">
                 <div class="slider_menu" id="slider_menu">
@@ -93,8 +95,8 @@
                     <div class="slider_btn btn_l" id="btn_l_m">&#10094;</div>
                 </div>
             </div>
-        </div>
-        <div class="pequeño texto menu ">
+        </article>
+        <article class="pequeño texto menu ">
            <ul>
             <li>Entrantes:
                 <p>Nuestros entrantes calientes Bacon and Cheese Fries, Smoked Wings, Hollywood Combo, Ribs Bites… son ideales para compartir</p>
@@ -134,10 +136,10 @@
                     </ul>
             </li>
            </ul> 
-        </div>  
+        </article>  
     </section>
     <section id="p4" class="pagina">
-        <div class="pequeño texto italic">
+        <article class="pequeño texto italic">
             <p>
                 La compañía fue fundada el año 1971 por iniciativa de un grupo de jóvenes extranjeros 
                 afincados en España (Mark Brownstein, Douglas Delfeld y los hermanos Anthony y Stephen A. Unger) y 
@@ -160,8 +162,8 @@
                  La cadena tiene una gran proporción de establecimientos franquiciados, que son gestionados por el Grupo 
                  Zena y Grupo Alsea.
             </p>
-        </div>
-        <div class="grande fotos">
+        </article>
+        <article class="grande fotos">
             <h1 class="titulo">HISTORIA</h1>
             <div class="container_slider">
                 <div class="slider_historia" id="slider_historia">
@@ -178,53 +180,54 @@
                     <div class="slider_btn btn_l" id="btn_l_h">&#10094;</div>
                 </div>
             </div>
-        </div>
+        </article>
     </section>
     <section id="p7">
-        <h1 class="titulo">Contacto</h1>
-        <p class="mensaje_contacto">
-            Si tienes alguna duda en cuanto a reservas y horarios contacta
-            directamente con el restaurante.
-        </p>
-        <div class="cuadro">
-            <a href="https://fostershollywood.es/restaurantes" target="_blank"  class="linkhover">ENCUENTRA TU RESTAURANTE</a>
-        </div>
-        <p class="mensaje_contacto">
-            Nos encantaría saber de ti. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.          
-        </p>
-        <div class="cuadro">
-            <button id="formulario_c">
-                <a href="contacto.html" id="formulario_lc">FORMULARIO</a>
-            </button>
-        </div>
-        <div class="contact">
-            <div>
-                <h2 class="minititle">Contáctanos</h2>
-                <p id="contactanos">
-                Correo electrónico: fostershollywood@gmail.com
-                <br>
-                Teléfono: +34 646 727 046
-                <br>
-                Dirección: S.A Camino de la Zarzuela, 1, Madrid
-                </p>
+        <article>
+            <h1 class="titulo">Contacto</h1>
+            <p class="mensaje_contacto">
+                Si tienes alguna duda en cuanto a reservas y horarios contacta
+                directamente con el restaurante.
+            </p>
+            <div class="cuadro">
+                <a href="https://fostershollywood.es/restaurantes" target="_blank"  class="linkhover">ENCUENTRA TU RESTAURANTE</a>
             </div>
-            <div>
-                <h2 class="minititle">Nuestras redes sociales </h2>
-                <ul class="linkhover">
-                    <li ><a href="https://www.tripadvisor.es/Restaurant_Review-g187514-d5794920-Reviews-Foster_s_Hollywood-Madrid.html" target="_blank" class="red">Tripadvisor</a></li>
-                    <li><a href="https://www.instagram.com/fostershollywood/" target="_blank"  class="red">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/fostershollywood/?locale=es_ES"  class="red">Facebook</a></li>
-                </ul>
+            <p class="mensaje_contacto">
+                Nos encantaría saber de ti. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.          
+            </p>
+            <div class="cuadro">
+                <button id="formulario_c">
+                    <a href="modulos/contacto.html" id="formulario_lc">FORMULARIO</a>
+                </button>
             </div>
-        </div>
-        <p id="cont1">
-            Nuestro equipo de atención al cliente está disponible de lunes a viernes, de 9:00 a 18:00. 
-            <br> esforzamos por responder a todas las consultas en un plazo de 24 horas.
-        </p>
-        <p id="cont2">
-            ¡ESPERAMOS TENER <span id="cont3">NOTICIAS TUYAS PRONTO!</span>  
-        </p>
-
+            <div class="contact">
+                <div>
+                    <h2 class="minititle">Contáctanos</h2>
+                    <p id="contactanos">
+                    Correo electrónico: fostershollywood@gmail.com
+                    <br>
+                    Teléfono: +34 646 727 046
+                    <br>
+                    Dirección: S.A Camino de la Zarzuela, 1, Madrid
+                    </p>
+                </div>
+                <div>
+                    <h2 class="minititle">Nuestras redes sociales </h2>
+                    <ul class="linkhover">
+                        <li ><a href="https://www.tripadvisor.es/Restaurant_Review-g187514-d5794920-Reviews-Foster_s_Hollywood-Madrid.html" target="_blank" class="red">Tripadvisor</a></li>
+                        <li><a href="https://www.instagram.com/fostershollywood/" target="_blank"  class="red">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/fostershollywood/?locale=es_ES"  class="red">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p id="cont1">
+                Nuestro equipo de atención al cliente está disponible de lunes a viernes, de 9:00 a 18:00. 
+                <br> esforzamos por responder a todas las consultas en un plazo de 24 horas.
+            </p>
+            <p id="cont2">
+                ¡ESPERAMOS TENER <span id="cont3">NOTICIAS TUYAS PRONTO!</span>  
+            </p>
+        </article>
     </section>
     <footer>
         <div class="Politicas">
