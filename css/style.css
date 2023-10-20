@@ -79,7 +79,16 @@ body{
 #p1{
     background-color: #07278f;
 }
-
+.hamburger{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    
+}
 .P_Izq{
     display: flex;
     flex-grow: 1;
@@ -490,7 +499,12 @@ margin-bottom: 10px;
     100% { color: black; }
 }
 @media screen and (max-width:600px){
-
+    .P_Dcha {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
     .pagina{
         flex-wrap: wrap;
     }

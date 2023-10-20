@@ -91,16 +91,14 @@ function createSlider(sliderId, btnLeftId, btnRightId, sliderImgClass) {
 createSlider("#slider_historia", "#btn_l_h", "#btn_r_h", ".slider_historia_img");
 createSlider("#slider_menu", "#btn_l_m", "#btn_r_m", ".slider_menu_img");
 
-const hamburguesa = document.querySelector('#hamburguesa');
-const abrir = document.querySelector('#abrir');
-const cerrar = document.querySelector('#cerrar');
+var hamburger = document.querySelector('.hamburger');
+var close = document.querySelector('.close');
+var menu = document.querySelector('.P_Dcha');
 
-abrir.addEventListener('click', function () {
-    hamburguesa.classList.add('hamburguesa_visible');
-}
-);
+hamburger.addEventListener('click', function() {
+    menu.style.width = '250px'; /* Cuando se hace clic en el botón, se expande el menú a 250px */
+});
 
-cerrar.addEventListener('click', function () {
-    hamburguesa.classList.remove('hamburguesa_visible');
-}
-);
+close.addEventListener('click', function() {
+    menu.style.width = '0'; /* Cuando se hace clic en el botón de cierre, se contrae el menú a 0 */
+});
