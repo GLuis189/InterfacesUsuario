@@ -85,8 +85,10 @@ body{
     top: 0;
     right: 0;
     padding: 10px;
-    background-color: #f8f9fa;
-    cursor: pointer;   
+    background-color: #8b9edb;
+    cursor: pointer;
+    color: #ee0a0a;
+    border-radius:20%;
 }
 .P_Izq{
     display: flex;

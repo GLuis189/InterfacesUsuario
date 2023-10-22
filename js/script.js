@@ -102,3 +102,5 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
     P_Dcha.classList.remove("visible");
 })
+
+
