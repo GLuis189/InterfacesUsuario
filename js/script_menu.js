@@ -9,8 +9,10 @@ function showStep(step) {
     currentStep = step;
     if (step === 'step3') {
         iniciarTemporizador();
+        guardarCarritoEnCookie();
     }
 }
+
 
 function nextStep() {
     var nextSteps = {
@@ -97,5 +99,12 @@ function iniciarTemporizador() {
         }
     }, 1000);
 };
+function guardarCarritoEnCookie() {
+    // Convierte el carrito en una cadena JSON
+    var carritoStr = JSON.stringify(carrito);
+    
+    // Crea una cookie con el nombre 'carrito' que almacena la información del carrito
+    document.cookie = 'carrito=' + carritoStr + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+}
 
 
