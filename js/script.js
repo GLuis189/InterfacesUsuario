@@ -94,6 +94,10 @@ createSlider("#slider_menu", "#btn_l_m", "#btn_r_m", ".slider_menu_img");
 var open = document.querySelector('.open');
 var close = document.querySelector('.close');
 var P_Dcha = document.querySelector('.P_Dcha');
+var new1 = document.querySelector('#new1');
+var cart2 = document.querySelector('#cart2');
+var hist3 = document.querySelector('#hist3');
+var cont7 = document.querySelector('#cont7');
 
 open.addEventListener("click", () => {
     P_Dcha.classList.add("visible");
@@ -103,4 +107,16 @@ close.addEventListener("click", () => {
     P_Dcha.classList.remove("visible");
 })
 
+new1.addEventListener("click", () => {
+    P_Dcha.classList.remove("visible");
+})
+cart2.addEventListener("click", () => {
+    P_Dcha.classList.remove("visible");
+})
+hist3.addEventListener("click", () => {
+    P_Dcha.classList.remove("visible");
+})
+cont7.addEventListener("click", () => {
+    P_Dcha.classList.remove("visible");
+})
 
