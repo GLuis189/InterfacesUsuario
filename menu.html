@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="carrito_menu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foster's Hollywood Menu</title>
-    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
-    <script src="../js/script_menu.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Nunito+Sans:opsz@6..12&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+    <script src="js/script_menu.js"></script>
 </head>
-<body>
+<body id="fondo">
     <ul class="breadcrumb">
-        <li><a href="#" >Paso1</a></li>
+        <li><a href="#" class="activo">Paso1</a></li>
         <li><a href="#" >Paso2</a></li>
         <li><a href="#" >Paso3</a></li>
     </ul>
-    <div class="menu">
+    <div class="menu_compra">
         <div class="interfaz">
             <div id="step1">
                 <div class="entrantes">
@@ -166,10 +167,9 @@
             </div>
         </div>
         <div class="carrito">
-            <h1>Carrito:</h1>
+            <h1>Carrito: <span id="contador">0</span></h1> 
             <div id="carrito"></div>
             <h1 id="total">Total: 0€</h1>
-            <div id="contador">0</div>
             <button onclick="previousStep()">Anterior</button>
             <button onclick="nextStep()">Siguiente</button> 
         </div>

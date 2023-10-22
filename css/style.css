@@ -424,17 +424,23 @@ footer p{
 }
 
 .breadcrumb {
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 25%;
+    left: 25%; */
     background-color: #f8f9fa;
     padding: 10px 0;
     list-style: none;
+    display: flex;
+    justify-content: space-around
 }
 
 .breadcrumb li {
 display: inline;
-margin-right: 10px;
+padding: 10px;
+border: #000000 1px solid;
+}
+.activo{
+    background-color: #df1d1d;
 }
 
 .breadcrumb li a {
@@ -442,16 +448,18 @@ color: #007bff;
 text-decoration: none;
 
 }
-.menu{
+.menu_compra{
     display: flex;
+    font-family: 'Permanent Marker';
 }
 .interfaz{
-    background-color: grey;
     flex-grow: 3;
 }
 .carrito{
-    background-color: lightblue;
     flex-grow: 1;
+}
+#fondo{
+    background-color: transparent;
 }
 .producto button{
     background-color: #007bff;
@@ -471,9 +479,9 @@ align-items: center;
 margin-bottom: 10px;
 }
 #contador {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    right: 0;
+    right: 0; */
     padding: 10px;
     background-color: #f8f9fa;
 }
@@ -481,17 +489,24 @@ margin-bottom: 10px;
     animation: temporizador 1s infinite;
 }
 
+#carrito_menu{
+    background-image: url(../media/images/stock.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Permanent Marker';
+}
+.menu_compra{
+    color: white;
+}
 #step1{
     display: none;
-    padding-top: 50 px;
 }
 #step2{
     display: none;
-    padding-top: 50 px;
+    padding-left: 50px ;
 }
 #step3{
     display: none;
-    padding-top: 50 px;
 }
 
 @keyframes temporizador {
@@ -563,6 +578,11 @@ margin-bottom: 10px;
     .container_slider{
         margin-top: 20px;
     }
+    .menu_compra{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
 }
 
 @media screen and (max-width:768px){
@@ -605,5 +625,9 @@ margin-bottom: 10px;
     }
     .container_slider{
         margin-top: 20px;
+    }
+    .menu_compra{
+        display: flex;
+        flex-wrap: wrap;
     }
 }

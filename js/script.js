@@ -103,20 +103,16 @@ open.addEventListener("click", () => {
     P_Dcha.classList.add("visible");
 })
 
-close.addEventListener("click", () => {
-    P_Dcha.classList.remove("visible");
-})
+var elements = [close, new1, cart2, hist3, cont7];
 
-new1.addEventListener("click", () => {
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener("click", function() {
     P_Dcha.classList.remove("visible");
-})
-cart2.addEventListener("click", () => {
-    P_Dcha.classList.remove("visible");
-})
-hist3.addEventListener("click", () => {
-    P_Dcha.classList.remove("visible");
-})
-cont7.addEventListener("click", () => {
-    P_Dcha.classList.remove("visible");
-})
+  });
+}
+
+
+
+
+
 
