@@ -79,15 +79,14 @@ body{
 #p1{
     background-color: #07278f;
 }
-.hamburger{
+.open, .close{
     display: none;
     position: absolute;
     top: 0;
     right: 0;
     padding: 10px;
     background-color: #f8f9fa;
-    cursor: pointer;
-    
+    cursor: pointer;   
 }
 .P_Izq{
     display: flex;
@@ -122,22 +121,22 @@ body{
     justify-content: center;
     align-items: center;
 }
-.bloque:nth-child(1){
+.bloque:nth-child(2){
     background-image: url("../media/images/novedades.jpg");
 }
-.bloque:nth-child(2){
+.bloque:nth-child(3){
     background-image: url("../media/images/costillar.jpg");
 }
-.bloque:nth-child(3){
+.bloque:nth-child(4){
     background-image: url("../media/images/origen.jpg");
 }
-.bloque:nth-child(4){
+.bloque:nth-child(5){
     background-image: url("../media/images/logo_locales.png");
 }
-.bloque:nth-child(5){
+.bloque:nth-child(6){
     background-image: url("../media/images/descargar.png");
 }
-.bloque:nth-child(6){
+.bloque:nth-child(7){
     background-image: url("../media/images/logo.jpg");
 }
 
@@ -500,10 +499,36 @@ margin-bottom: 10px;
 }
 @media screen and (max-width:600px){
     .P_Dcha {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #01072b;
+        padding: 1rem;
+        padding-top: 4rem;
+        box-shadow: 0 0 0 10000vmax rgba(0, 0, 0, .5);
     }
-    .hamburger {
+    .bloque{
+        padding: 6rem;
+        width: 44%;
+        height: 55%;
+    }
+
+
+    .open, .close {
         display: block;
+        border: 0;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+    .P_Dcha.visible {
+        opacity: 1;
+        visibility: visible;
     }
     .pagina{
         flex-wrap: wrap;
