@@ -141,7 +141,6 @@ function showStep(step) {
 }
 
 
-
 function nextStep() {
     var nextSteps = {
         'step1': 'step2',
