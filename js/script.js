@@ -124,6 +124,32 @@ for (var i = 0; i < elements.length; i++) {
   });
 }
 }
+function checkForm() {
+    var titular = document.querySelector('#step2 input[type="text"]:nth-of-type(1)').value;
+    var numero = document.querySelector('#step2 input[type="text"]:nth-of-type(2)').value;
+    var fecha = document.querySelector('#step2 input[type="text"]:nth-of-type(3)').value;
+    var cvv = document.querySelector('#step2 input[type="text"]:nth-of-type(4)').value;
+
+    var regexTitular = /^[a-zA-Z ]+$/;
+    var regexNumero = /^[0-9]{16}$/;
+    var regexFecha = /^(0[1-9]|1[0-2])\/([0-9]{4})$/;
+    var regexCVV = /^[0-9]{3}$/;
+
+    if (titular === '' || numero === '' || fecha === '' || cvv === '') {
+        alert('Por favor, completa todos los campos del formulario.');
+    } else if (!regexTitular.test(titular)) {
+        alert('El nombre del titular debe contener solo letras y espacios.');
+    } else if (!regexNumero.test(numero)) {
+        alert('El número de la tarjeta debe contener 16 dígitos.');
+    } else if (!regexFecha.test(fecha)) {
+        alert('La fecha de caducidad debe tener el formato MM/AAAA.');
+    } else if (!regexCVV.test(cvv)) {
+        alert('El CVV debe contener 3 dígitos.');
+    } else {
+        return true;
+    }
+}
+
 
 var currentStep = 'step1';
 
@@ -150,6 +176,11 @@ function nextStep() {
     var paso1 = document.querySelector('#paso1');
     var paso2 = document.querySelector('#paso2');
     var paso3 = document.querySelector('#paso3');
+
+    if (currentStep === 'step2' && !checkForm()) {
+        return; // Si checkForm() es false, no hacemos nada más y salimos de la función.
+    }
+
     if (currentStep === 'step3') {
         window.location.href = nextSteps[currentStep];
     } else {
@@ -157,12 +188,13 @@ function nextStep() {
         if (currentStep === 'step2') {
             paso1.classList.remove('activo');
             paso2.classList.add('activo');
-        } else if (currentStep === 'step3') {
+        } else if (currentStep === 'step3' ) {
             paso2.classList.remove('activo');
             paso3.classList.add('activo');
         }
+    }
 }
-}
+
 
 function previousStep() {
     var previousSteps = {
