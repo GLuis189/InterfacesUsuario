@@ -40,20 +40,24 @@ function nextStep() {
 
 function previousStep() {
     var previousSteps = {
-        'step1': 'step3',
+        'step1': 'index.html',
         'step2': 'step1',
         'step3': 'step2'
     };
     var paso1 = document.querySelector('#paso1');
     var paso2 = document.querySelector('#paso2');
     var paso3 = document.querySelector('#paso3');
-    showStep(previousSteps[currentStep]);
-    if (currentStep === 'step2') {
-        paso3.classList.remove('activo');
-        paso2.classList.add('activo');
-    } else if (currentStep === 'step1') {
-        paso2.classList.remove('activo');
-        paso1.classList.add('activo');
+    if (currentStep === 'step1') {
+        window.location.href = previousSteps[currentStep];
+    } else {
+        showStep(previousSteps[currentStep]);
+        if (currentStep === 'step2') {
+            paso3.classList.remove('activo');
+            paso2.classList.add('activo');
+        } else if (currentStep === 'step1') {
+            paso2.classList.remove('activo');
+            paso1.classList.add('activo');
+        }
     }
 }
 var carrito = {};
