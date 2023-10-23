@@ -10,6 +10,15 @@ function validarFormulario() {
     if (!dniRegex.test(dni)) {
         alert('Formato de DNI inválido');
         return false;
+    } else {
+        var numDni = dni.substring(0, 8);
+        var letraDni = dni.substring(8);
+        var letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+        var letraCorrecta = letras.charAt(numDni % 23);
+        if (letraDni.toUpperCase() != letraCorrecta) {
+            alert('La letra del DNI no es correcta');
+            return false;
+        }
     }
 
     // Validar nombre y apellido
