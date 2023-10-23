@@ -495,7 +495,6 @@ margin-bottom: 10px;
     animation: temporizador 1s infinite;
     font-size: 5vw;
     padding-left: 3vw;
-
 }
 
 #carrito_menu{
@@ -599,6 +598,9 @@ margin-bottom: 10px;
         padding-left: 0;
         padding-top: 0;
     }
+    #temporizador {
+        font-size: 10vw;
+    }
     
 }
 
@@ -651,6 +653,9 @@ margin-bottom: 10px;
         text-align: center;
         padding-left: 0;
         padding-top: 0;
+    }
+    #temporizador {
+        font-size: 10vw;
     }
     
 }

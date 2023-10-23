@@ -104,7 +104,7 @@ function actualizarCarrito() {
 }
 
 function actualizarTotal() {
-    document.getElementById('total').innerText = 'Total: ' + total;
+    document.getElementById('total').innerText = 'Total: ' + total + "€";
 }
 var tiempoRestante = 10 * 60;
 
