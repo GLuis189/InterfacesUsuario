@@ -424,29 +424,26 @@ footer p{
 }
 
 .breadcrumb {
-    /* position: fixed;
-    top: 0;
-    left: 25%; */
-    background-color: #f8f9fa;
+    background-color: transparent;
     padding: 10px 0;
     list-style: none;
     display: flex;
     justify-content: space-around
 }
 
-.breadcrumb li {
-display: inline;
-padding: 10px;
-border: #000000 1px solid;
+.breadcrumb  li a {
+    background-color: white;
+    display: inline;
+    padding: 10px;
+    border: #000000 1px solid;
+    border-radius: 10px;
+}
+.paso{
+    text-decoration: none;
+    color: #07278f;
 }
 .activo{
-    background-color: #df1d1d;
-}
-
-.breadcrumb li a {
-color: #007bff;
-text-decoration: none;
-
+    color:#ee0a0a;
 }
 .menu_compra{
     display: flex;
@@ -454,10 +451,25 @@ text-decoration: none;
 }
 .interfaz{
     flex-grow: 3;
+    width: 70%;
 }
 .carrito{
     flex-grow: 1;
+    padding-top: 5vw;
+    padding-left: 5vw;
 }
+#carrito_menu button{
+    border: none;
+    background-color: white;
+    color: #000000;
+    font-size: 2.5vh;
+    font-family:'Permanent Marker';
+    border-radius: 10px;
+}
+#carrito button{
+    border-radius: 20px;
+}
+
 #fondo{
     background-color: transparent;
 }
@@ -479,14 +491,14 @@ align-items: center;
 margin-bottom: 10px;
 }
 #contador {
-    /* position: absolute;
-    top: 0;
-    right: 0; */
     padding: 10px;
-    background-color: #f8f9fa;
+    
 }
 #temporizador {
     animation: temporizador 1s infinite;
+    font-size: 5vw;
+    padding-left: 3vw;
+
 }
 
 #carrito_menu{
@@ -494,6 +506,8 @@ margin-bottom: 10px;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Permanent Marker';
+    background-color: white;
+    padding-bottom: 50vh;
 }
 .menu_compra{
     color: white;
@@ -503,16 +517,17 @@ margin-bottom: 10px;
 }
 #step2{
     display: none;
-    padding-left: 50px ;
+    padding-left: 50px;
 }
 #step3{
     display: none;
+    padding-left: 50px;
 }
 
 @keyframes temporizador {
-    0% { color: black; }
-    50% { color: red; }
-    100% { color: black; }
+    0% { color: white; }
+    50% { color: #df1d1d; }
+    100% { color: white; }
 }
 @media screen and (max-width:600px){
     .P_Dcha {
@@ -582,6 +597,11 @@ margin-bottom: 10px;
         display: flex;
         flex-wrap: wrap;
     }
+    .carrito, #step2, #step3{
+        text-align: center;
+        padding-left: 0;
+        padding-top: 0;
+    }
     
 }
 
@@ -630,4 +650,10 @@ margin-bottom: 10px;
         display: flex;
         flex-wrap: wrap;
     }
+    .carrito, #step2, #step3{
+        text-align: center;
+        padding-left: 0;
+        padding-top: 0;
+    }
+    
 }

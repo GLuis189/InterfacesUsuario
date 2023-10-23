@@ -14,16 +14,27 @@ function showStep(step) {
 }
 
 
+
 function nextStep() {
     var nextSteps = {
         'step1': 'step2',
         'step2': 'step3',
-        'step3': '../index.html'
+        'step3': 'index.html'
     };
+    var paso1 = document.querySelector('#paso1');
+    var paso2 = document.querySelector('#paso2');
+    var paso3 = document.querySelector('#paso3');
     if (currentStep === 'step3') {
         window.location.href = nextSteps[currentStep];
     } else {
         showStep(nextSteps[currentStep]);
+        if (currentStep === 'step2') {
+            paso1.classList.remove('activo');
+            paso2.classList.add('activo');
+        } else if (currentStep === 'step3') {
+            paso2.classList.remove('activo');
+            paso3.classList.add('activo');
+        }
 }
 }
 
@@ -33,7 +44,17 @@ function previousStep() {
         'step2': 'step1',
         'step3': 'step2'
     };
+    var paso1 = document.querySelector('#paso1');
+    var paso2 = document.querySelector('#paso2');
+    var paso3 = document.querySelector('#paso3');
     showStep(previousSteps[currentStep]);
+    if (currentStep === 'step2') {
+        paso3.classList.remove('activo');
+        paso2.classList.add('activo');
+    } else if (currentStep === 'step1') {
+        paso2.classList.remove('activo');
+        paso1.classList.add('activo');
+    }
 }
 var carrito = {};
 var total = 0;
