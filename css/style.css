@@ -174,14 +174,12 @@ body{
     font-family: 'Jockey One';
 }
 #formulario_c{
-    background-color:#010a4e;
-    border: none;
-}
-#formulario_lc{
     color: white;
-    text-decoration: none;
     font-size: 30px;
     font-family: 'Jockey One';
+    text-decoration: none;
+    background-color:#010a4e;
+    border: none; 
 }
 .titulo{
     font-size: 150px;
