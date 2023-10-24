@@ -180,6 +180,7 @@ body{
     text-decoration: none;
     background-color:#010a4e;
     border: none; 
+    cursor: pointer;
 }
 .titulo{
     font-size: 150px;
