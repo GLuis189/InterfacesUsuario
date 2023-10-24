@@ -547,6 +547,7 @@ margin-bottom: 10px;
         padding: 1rem;
         padding-top: 4rem;
         box-shadow: 0 0 0 10000vmax rgba(0, 0, 0, .5);
+        z-index: 11111;
     }
     .bloque{
         padding: 6rem;
