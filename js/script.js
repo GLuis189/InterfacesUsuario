@@ -125,10 +125,10 @@ for (let i = 0; i < elements.length; i++) {
 }
 }
 function checkForm() {
-    const titular = document.querySelector('#step2 input[type="text"]:nth-of-type(1)').value;
-    const numero = document.querySelector('#step2 input[type="text"]:nth-of-type(2)').value;
-    const fecha = document.querySelector('#step2 input[type="text"]:nth-of-type(3)').value;
-    const cvv = document.querySelector('#step2 input[type="text"]:nth-of-type(4)').value;
+    const titular = document.querySelector('#titular').value;
+    const numero = document.querySelector('#numero').value;
+    const fecha = document.querySelector('#fecha').value;
+    const cvv = document.querySelector('#cvv').value;
 
     const regexTitular = /^[a-zA-Z ]+$/;
     const regexNumero = /^[0-9]{16}$/;
@@ -151,7 +151,7 @@ function checkForm() {
 }
 
 
-const currentStep = 'step1';
+let currentStep = 'step1';
 
 function showStep(step) {
     const allSteps = ['step1', 'step2', 'step3'];
@@ -218,8 +218,8 @@ function previousStep() {
         }
     }
 }
-const carrito = {};
-const total = 0;
+let carrito = {};
+let total = 0;
 
 function agregarProducto(producto, precio) {
     precio = parseFloat(precio);
@@ -247,16 +247,16 @@ function eliminarProducto(producto, precio) {
     }
 }
 function actualizarContador() {
-    const contador = 0;
-    for (const producto in carrito) {
+    let contador = 0;
+    for (let producto in carrito) {
         contador += carrito[producto].cantidad;
     }
     document.getElementById('contador').innerText = contador;
 }
 function actualizarCarrito() {
-    const carritoDiv = document.getElementById('carrito');
+    let carritoDiv = document.getElementById('carrito');
     carritoDiv.innerHTML = '';
-    for (const producto in carrito) {
+    for (let producto in carrito) {
         carritoDiv.innerHTML += producto + ': ' + carrito[producto].cantidad + '<br>';
     }
 }
@@ -264,17 +264,17 @@ function actualizarCarrito() {
 function actualizarTotal() {
     document.getElementById('total').innerText = 'Total: ' + total + "€";
 }
-const tiempoRestante = 10 * 60;
+let tiempoRestante = 10 * 60;
 
 function actualizarTemporizador() {
-    const minutos = Math.floor(tiempoRestante / 60);
-    const segundos = tiempoRestante % 60;
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
     document.getElementById('temporizador').innerText = minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
 }
 
 function iniciarTemporizador() {
     actualizarTemporizador();
-    const intervalo = setInterval(function() {
+    let intervalo = setInterval(function() {
         tiempoRestante--;
         actualizarTemporizador();
         if (tiempoRestante <= 0) {
@@ -284,7 +284,7 @@ function iniciarTemporizador() {
 };
 function guardarCarritoEnCookie() {
     // Convierte el carrito en una cadena JSON
-    const carritoStr = JSON.stringify(carrito);
+    let carritoStr = JSON.stringify(carrito);
     
     // Crea una cookie con el nombre 'carrito' que almacena la información del carrito
     document.cookie = 'carrito=' + carritoStr + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
