@@ -216,7 +216,7 @@ body{
 .fotos{
     min-width: 40vw;
 }
-.pequeño{
+.small{
     flex-grow: 1;
 }
 
