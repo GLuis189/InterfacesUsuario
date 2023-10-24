@@ -1,20 +1,20 @@
 function validarFormulario() {
-    var dni = document.getElementById('dni').value;
-    var nombre = document.getElementById('nombre').value;
-    var apellido = document.getElementById('apellido').value;
-    var telefono = document.getElementById('telefono').value;
-    var email = document.getElementById('email').value;
+    const dni = document.getElementById('dni').value;
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const telefono = document.getElementById('telefono').value;
+    const email = document.getElementById('email').value;
 
     // Validar DNI
-    var dniRegex = /^[0-9]{8}[A-Za-z]$/;
+    const dniRegex = /^[0-9]{8}[A-Za-z]$/;
     if (!dniRegex.test(dni)) {
         alert('Formato de DNI inválido');
         return false;
     } else {
-        var numDni = dni.substring(0, 8);
-        var letraDni = dni.substring(8);
-        var letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-        var letraCorrecta = letras.charAt(numDni % 23);
+        const numDni = dni.substring(0, 8);
+        const letraDni = dni.substring(8);
+        const letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+        const letraCorrecta = letras.charAt(numDni % 23);
         if (letraDni.toUpperCase() != letraCorrecta) {
             alert('La letra del DNI no es correcta');
             return false;
@@ -28,14 +28,14 @@ function validarFormulario() {
     }
 
     // Validar teléfono
-    var telRegex = /^[0-9]{9}$/;
+    const telRegex = /^[0-9]{9}$/;
     if (!telRegex.test(telefono)) {
         alert('Formato de teléfono inválido');
         return false;
     }
 
     // Validar correo electrónico
-    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
         alert('Formato de correo electrónico inválido');
         return false;
@@ -103,37 +103,37 @@ function createSlider(sliderId, btnLeftId, btnRightId, sliderImgClass) {
 createSlider("#slider_historia", "#btn_l_h", "#btn_r_h", ".slider_historia_img");
 createSlider("#slider_menu", "#btn_l_m", "#btn_r_m", ".slider_menu_img");
 
-var open = document.querySelector('.open');
-var close = document.querySelector('.close');
-var P_Dcha = document.querySelector('.P_Dcha');
-var new1 = document.querySelector('#new1');
-var cart2 = document.querySelector('#cart2');
-var hist3 = document.querySelector('#hist3');
-var cont7 = document.querySelector('#cont7');
+const open = document.querySelector('.open');
+const close = document.querySelector('.close');
+const P_Dcha = document.querySelector('.P_Dcha');
+const new1 = document.querySelector('#new1');
+const cart2 = document.querySelector('#cart2');
+const hist3 = document.querySelector('#hist3');
+const cont7 = document.querySelector('#cont7');
 
 if (open, close, P_Dcha, new1, cart2, hist3, cont7) {
 open.addEventListener("click", () => {
     P_Dcha.classList.add("visible");
 })
 
-var elements = [close, new1, cart2, hist3, cont7];
+const elements = [close, new1, cart2, hist3, cont7];
 
-for (var i = 0; i < elements.length; i++) {
+for (let i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", function() {
     P_Dcha.classList.remove("visible");
   });
 }
 }
 function checkForm() {
-    var titular = document.querySelector('#step2 input[type="text"]:nth-of-type(1)').value;
-    var numero = document.querySelector('#step2 input[type="text"]:nth-of-type(2)').value;
-    var fecha = document.querySelector('#step2 input[type="text"]:nth-of-type(3)').value;
-    var cvv = document.querySelector('#step2 input[type="text"]:nth-of-type(4)').value;
+    const titular = document.querySelector('#step2 input[type="text"]:nth-of-type(1)').value;
+    const numero = document.querySelector('#step2 input[type="text"]:nth-of-type(2)').value;
+    const fecha = document.querySelector('#step2 input[type="text"]:nth-of-type(3)').value;
+    const cvv = document.querySelector('#step2 input[type="text"]:nth-of-type(4)').value;
 
-    var regexTitular = /^[a-zA-Z ]+$/;
-    var regexNumero = /^[0-9]{16}$/;
-    var regexFecha = /^(0[1-9]|1[0-2])\/([0-9]{4})$/;
-    var regexCVV = /^[0-9]{3}$/;
+    const regexTitular = /^[a-zA-Z ]+$/;
+    const regexNumero = /^[0-9]{16}$/;
+    const regexFecha = /^(0[1-9]|1[0-2])\/([0-9]{4})$/;
+    const regexCVV = /^[0-9]{3}$/;
 
     if (titular === '' || numero === '' || fecha === '' || cvv === '') {
         alert('Por favor, completa todos los campos del formulario.');
@@ -151,10 +151,10 @@ function checkForm() {
 }
 
 
-var currentStep = 'step1';
+const currentStep = 'step1';
 
 function showStep(step) {
-    var allSteps = ['step1', 'step2', 'step3'];
+    const allSteps = ['step1', 'step2', 'step3'];
     allSteps.forEach(function(s) {
         document.getElementById(s).style.display = 'none';
     });
@@ -168,14 +168,14 @@ function showStep(step) {
 
 
 function nextStep() {
-    var nextSteps = {
+    const nextSteps = {
         'step1': 'step2',
         'step2': 'step3',
         'step3': 'index.html'
     };
-    var paso1 = document.querySelector('#paso1');
-    var paso2 = document.querySelector('#paso2');
-    var paso3 = document.querySelector('#paso3');
+    const paso1 = document.querySelector('#paso1');
+    const paso2 = document.querySelector('#paso2');
+    const paso3 = document.querySelector('#paso3');
 
     if (currentStep === 'step2' && !checkForm()) {
         return; // Si checkForm() es false, no hacemos nada más y salimos de la función.
@@ -197,14 +197,14 @@ function nextStep() {
 
 
 function previousStep() {
-    var previousSteps = {
+    const previousSteps = {
         'step1': 'index.html',
         'step2': 'step1',
         'step3': 'step2'
     };
-    var paso1 = document.querySelector('#paso1');
-    var paso2 = document.querySelector('#paso2');
-    var paso3 = document.querySelector('#paso3');
+    const paso1 = document.querySelector('#paso1');
+    const paso2 = document.querySelector('#paso2');
+    const paso3 = document.querySelector('#paso3');
     if (currentStep === 'step1') {
         window.location.href = previousSteps[currentStep];
     } else {
@@ -218,8 +218,8 @@ function previousStep() {
         }
     }
 }
-var carrito = {};
-var total = 0;
+const carrito = {};
+const total = 0;
 
 function agregarProducto(producto, precio) {
     precio = parseFloat(precio);
@@ -247,16 +247,16 @@ function eliminarProducto(producto, precio) {
     }
 }
 function actualizarContador() {
-    var contador = 0;
-    for (var producto in carrito) {
+    const contador = 0;
+    for (const producto in carrito) {
         contador += carrito[producto].cantidad;
     }
     document.getElementById('contador').innerText = contador;
 }
 function actualizarCarrito() {
-    var carritoDiv = document.getElementById('carrito');
+    const carritoDiv = document.getElementById('carrito');
     carritoDiv.innerHTML = '';
-    for (var producto in carrito) {
+    for (const producto in carrito) {
         carritoDiv.innerHTML += producto + ': ' + carrito[producto].cantidad + '<br>';
     }
 }
@@ -264,17 +264,17 @@ function actualizarCarrito() {
 function actualizarTotal() {
     document.getElementById('total').innerText = 'Total: ' + total + "€";
 }
-var tiempoRestante = 10 * 60;
+const tiempoRestante = 10 * 60;
 
 function actualizarTemporizador() {
-    var minutos = Math.floor(tiempoRestante / 60);
-    var segundos = tiempoRestante % 60;
+    const minutos = Math.floor(tiempoRestante / 60);
+    const segundos = tiempoRestante % 60;
     document.getElementById('temporizador').innerText = minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
 }
 
 function iniciarTemporizador() {
     actualizarTemporizador();
-    var intervalo = setInterval(function() {
+    const intervalo = setInterval(function() {
         tiempoRestante--;
         actualizarTemporizador();
         if (tiempoRestante <= 0) {
@@ -284,7 +284,7 @@ function iniciarTemporizador() {
 };
 function guardarCarritoEnCookie() {
     // Convierte el carrito en una cadena JSON
-    var carritoStr = JSON.stringify(carrito);
+    const carritoStr = JSON.stringify(carrito);
     
     // Crea una cookie con el nombre 'carrito' que almacena la información del carrito
     document.cookie = 'carrito=' + carritoStr + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
